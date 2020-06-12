@@ -121,7 +121,7 @@ class U_Net(nn.Module):
 
         return out
 
-
+'''
 class Recurrent_block(nn.Module):
     """
     Recurrent Block for R2Unet_CNN
