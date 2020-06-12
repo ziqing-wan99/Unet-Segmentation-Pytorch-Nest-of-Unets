@@ -28,20 +28,20 @@ class Images_Dataset(Dataset):
         self.transformM = transformM
 
     def __len__(self):
-        return len(self.images_dir)
+        return len(self.images_dir) # no.of input images 
 
     def __getitem__(self, idx):
 
         for i in range(len(self.images_dir)):
-            image = io.imread(self.images_dir[i])
-            label = io.imread(self.labels_dir[i])
+            image = io.imread(self.images_dir[i]) # get images 
+            label = io.imread(self.labels_dir[i]) # get labels 
             if self.transformI:
                 image = self.transformI(image)
             if self.transformM:
                 label = self.transformM(label)
             sample = {'images': image, 'labels': label}
 
-        return sample
+        return sample # sample=image+label
 
 
 class Images_Dataset_folder(torch.utils.data.Dataset):
