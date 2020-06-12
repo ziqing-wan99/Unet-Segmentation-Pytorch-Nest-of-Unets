@@ -17,9 +17,9 @@ def dice_loss(prediction, target):
 
     intersection = (i_flat * t_flat).sum()
 
-    return 1 - ((2. * intersection + smooth) / (i_flat.sum() + t_flat.sum() + smooth))
+    return 1 - ((2. * intersection + smooth) / (i_flat.sum() + t_flat.sum() + smooth)) # 1-dice_coefficient
 
-
+'''
 def calc_loss(prediction, target, bce_weight=0.5):
     """Calculating the loss and metrics
     Args:
@@ -59,3 +59,4 @@ def threshold_predictions_p(predictions, thr=0.01):
     low_values_indices = thresholded_preds >= thr
     thresholded_preds[low_values_indices] = 1
     return thresholded_preds
+'''
