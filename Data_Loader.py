@@ -43,7 +43,7 @@ class Images_Dataset(Dataset):
 
         return sample # sample=image+label
 
-
+'''
 class Images_Dataset_folder(torch.utils.data.Dataset):
     """Class for getting individual transformations and data
     Args:
@@ -112,3 +112,4 @@ class Images_Dataset_folder(torch.utils.data.Dataset):
 
         return img, label
 
+'''
